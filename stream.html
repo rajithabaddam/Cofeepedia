@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stream</title>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Our CSS-->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!--D3 CSS-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+    <!--Feather icons-->
+    <script src="static/js/feather.js"></script>
+</head>
+<body>
+    <div class="content-wrap">
+        <!--NAVBAR-->
+        <nav class="navbar navbar-expand-md navbar-light md-navbar-color">
+            <a class="navbar-brand" href="index.html">Coffeepedia</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html"><i data-feather="map"></i> Map</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html"><i data-feather="database"></i> Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bubbles.html"><i data-feather="circle"></i> Attributes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="flavors.html"><i data-feather="coffee"></i> Flavors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="stream.html"><i data-feather="activity"></i> Trends</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="whoarewe.html"><i data-feather="users"></i> Who Are We?</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        <br>
+        <!--PAGE CONTENT-->
+        <div class="container">
+            <!--SUMMARY BOX-->
+            <div class="jumbotron">
+                <h1 class="display-6 header-text">Global Production Over Time</h1><br>
+                <p style="text-align:center;">
+                    Streamgraphs are a type of stacked area chart where the areas are 
+                    displaced around a central axis. They are often used for displaying 
+                    compound volume across different categories or over time. These plots 
+                    visualize both Arabica and Robusta coffee production by countries 
+                    from 2001 to 2020, using a relative scale. Data values are reported in 
+                    1,000 60kg bags.
+                </p>
+                <p style="text-align:center;">
+                    Brazil is consistently the largest producer of Arabica coffee, and Vietnam 
+                    is consistently the largest producer of Robusta coffee. Since at least 2001, 
+                    Vietnam has increased production.
+                </p>
+            </div>
+            <!--STREAMGRAPHS-->
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <figure class="highcharts-figure">
+                        <div id="container_arabica"></div>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <figure class="highcharts-figure">
+                        <div id="container_robusta"></div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Insert Feather Icons-->
+    <!-- Courtesy of https://feathericons.com/ -->
+    <script>feather.replace()</script>
+    <!--Our JS-->
+    <script src="static/js/arabica_coffee.js"></script>
+    <script src="static/js/robusta_coffee.js"></script>
+    <!---Highcharts JS-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/streamgraph.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/annotations.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
